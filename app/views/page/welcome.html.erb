@@ -1,0 +1,25 @@
+<div class="home-banner" data-stretch="<%= image_url "vagrant.jpg" %>">
+
+	<div class="banner-inner container clearfix">
+	  <h1>It's Party Time!</h1>
+	  <p class="subheading"><%= link_to t("daoshijujuliaoliaochengxu"), "#" %></p>
+	  <div class="home-banner-links">
+	    <%= link_to t("fabuxinhuodong"), "/issues/new", class: "banner-btn btn" %>
+	  </div>
+	</div>
+	
+	<div class="issue-list-header">
+	  <div class="container clearfix">
+	    <h1 class="issue-list-heading"><%= link_to t("suoyouhuodongdouzaixiamianle"), "#" %></h1>
+	  </div>
+	</div>
+
+	<div class="container clearfix">
+		<%= render partial: 'issue_list', locals:{issues: @issues} %>
+	</div>
+
+</div>
+
+<script>
+$('.home-banner').anystretch();
+</script>
